@@ -1,3 +1,6 @@
+---
+node_size: 50
+---
 # 🎮 ProjectGameHub — Dashboard
 
 ## 📌 Quick Links
@@ -14,3 +17,4 @@
 ## 📂 Vault Structure
 
 ## 🗓 Status
+
