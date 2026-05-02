@@ -13,12 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 - Systems/Loot.md",
+                "file": "Code Structure/Player Classes/Player.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Loot"
+              "title": "Player"
+            }
+          }
+        ]
+      },
+      {
+        "id": "10288c8bba8a2257",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c254ab0c5468653",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -180,72 +196,42 @@
       "bases:Create new base": false
     }
   },
-  "floating": {
-    "id": "af944f4b623206c3",
-    "type": "floating",
-    "children": [
-      {
-        "id": "371246b47a46d462",
-        "type": "window",
-        "children": [
-          {
-            "id": "725b38a2feafeb54",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "5c254ab0c5468653",
-                "type": "leaf",
-                "state": {
-                  "type": "graph",
-                  "state": {},
-                  "icon": "lucide-git-fork",
-                  "title": "Graph view"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 278,
-        "y": 19,
-        "width": 1108,
-        "height": 1032,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "b614383af9fc67b8",
   "lastOpenFiles": [
-    "07 - Items/Weapons.md",
-    "07 - Items/Rarity.md",
-    "07 - Items/Item Types.md",
-    "03 - Systems/Loot.md",
-    "Armor Types/Boots.md",
-    "Armor Types/Torso.md",
-    "Armor Types/Helmet.md",
-    "Armor Types",
-    "Weapon Types/Scythe.md",
-    "Weapon Types/Sword.md",
-    "Weapon Types",
+    "Code Structure/Player Classes/Player.md",
+    "Overall Design/07 - Items/Weapons.md",
+    "Overall Design/07 - Items/Armor.md",
+    "Overall Design/07 - Items/Item Types.md",
+    "Overall Design/06 - Assets & References/Art.md",
+    "Overall Design/05 - Flows/Flow.md",
+    "Overall Design/04 - Enemies & Bosses/Mobs.md",
+    "Overall Design/03 - Systems/Systems.md",
+    "Overall Design/02 - Levels/Level Template.md",
+    "Overall Design/01 - Design/Game Loop.md",
+    "Overall Design/01 - Design/Design.md",
+    "Overall Design/00 - Home/Overall Design.md",
+    "Code Structure/Code Structure.md",
+    "Code Structure/Player Classes/PlayerMovement.md",
+    "Code Structure/Player Classes/PlayerHealth.md",
+    "Code Structure/Player Classes/PlayerCombat.md",
+    "Code Structure/Player Classes/Untitled",
+    "Code Structure/Player Classes",
+    "Overall Design/03 - Systems/Loot.md",
+    "Code Structure",
+    "Weapon Types/Untitled",
+    "Overall Design",
+    "Overall Design/07 - Items/Rarity.md",
+    "Overall Design/Armor Types/Boots.md",
+    "Overall Design/Armor Types/Torso.md",
+    "Overall Design/Armor Types/Helmet.md",
+    "Overall Design/Armor Types",
+    "Overall Design/Weapon Types/Scythe.md",
+    "Overall Design/Weapon Types/Sword.md",
+    "Overall Design/Weapon Types",
     "Helmets.md",
     "Item Attributes",
-    "07 - Items/Armor.md",
-    "04 - Enemies & Bosses/Enemy Template.md",
-    "00 - Home/Dashboard.md",
-    "07 - Items",
-    "03 - Systems/Items.md",
-    "03 - Systems/Combat.md",
-    "03 - Systems/Systems.md",
-    "01 - Design/Design.md",
-    "04 - Enemies & Bosses/Mobs.md",
-    "06 - Assets & References/Art.md",
-    "05 - Flows/Flow.md",
-    "02 - Levels/Level Template.md",
-    "02 - Levels/Levels/Levels Link.md",
-    "05 - Flows/UI Flow.md",
-    "05 - Flows/Game Flow.md",
-    "04 - Enemies & Bosses/Boss Template.md",
-    "03 - Systems/Player.md"
+    "Overall Design/04 - Enemies & Bosses/Enemy Template.md",
+    "Overall Design/07 - Items",
+    "03 - Systems/Items.md"
   ]
 }

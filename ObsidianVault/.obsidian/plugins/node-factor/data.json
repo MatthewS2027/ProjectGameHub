@@ -31,6 +31,14 @@
     {
       "id": "05 - Flows/Flow Link.md",
       "weight": 15
+    },
+    {
+      "id": "00 - Home/Overall Design.md",
+      "weight": 40
+    },
+    {
+      "id": "Code Structure/Code Structure.md",
+      "weight": 40
     }
   ]
 }

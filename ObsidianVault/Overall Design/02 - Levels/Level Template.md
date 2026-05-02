@@ -1,3 +1,7 @@
+---
+node_size: 20
+---
+
 # 🗺 Level Template
 
 ## 📋 Level Info
