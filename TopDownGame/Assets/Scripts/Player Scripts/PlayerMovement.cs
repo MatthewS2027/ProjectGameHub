@@ -11,12 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     //Dashing variables
-    /*
     private bool canDash = true;
-    private bool isDashing = false;
-    private float dashTime = 0.2f;
-    private float dashCooldown = 0.5f;
-    */
+    private bool isDashing;
+    [SerializeField] private float dashTime = 0.2f;
+    [SerializeField] private float dashCooldown = 0.5f;
+    [SerializeField] private float dashingPower = 20f;
 
     void Awake()
     {
@@ -32,18 +31,46 @@ public class PlayerMovement : MonoBehaviour
 
         movement = new Vector2(horizontal, vertical).normalized; 
 
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
+
     }
 
     private void FixedUpdate()
     {
+        if (isDashing) return;
+
         rb.MovePosition(rb.position + player.BaseSpeed * Time.fixedDeltaTime * movement);
     }
 
-    /*
+
     private IEnumerator Dash()
     {
-        
+        canDash = false;
+        isDashing = true;
+
+        Vector2 dashDir;
+
+        if (movement == Vector2.zero)
+            dashDir = Vector2.right; // fallback direction
+        else
+            dashDir = movement.normalized;
+
+        float startTime = Time.time;
+
+        while (Time.time < startTime + dashTime)    //Keep dashing while current time is less than start + dash time
+        {
+            rb.MovePosition(rb.position + dashDir * dashingPower * Time.fixedDeltaTime);
+            yield return new WaitForFixedUpdate();
+        }
+
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+
+        canDash = true;
     }
-    */
 
 }
