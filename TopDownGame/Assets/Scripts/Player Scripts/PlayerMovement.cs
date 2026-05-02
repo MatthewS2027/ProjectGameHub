@@ -5,16 +5,23 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    [Header("Player Movement")]
-    public float moveSpeed = 5f;
+    private Player player;
 
-    private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
     private Vector2 movement;
 
-    // Start is called before the first frame update
+    //Dashing variables
+    /*
+    private bool canDash = true;
+    private bool isDashing = false;
+    private float dashTime = 0.2f;
+    private float dashCooldown = 0.5f;
+    */
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -29,8 +36,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
+        rb.MovePosition(rb.position + player.BaseSpeed * Time.fixedDeltaTime * movement);
     }
 
+    /*
+    private IEnumerator Dash()
+    {
+        
+    }
+    */
 
 }
