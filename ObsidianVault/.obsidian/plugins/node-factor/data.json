@@ -1,0 +1,36 @@
+{
+  "fwdMultiplier": 1,
+  "fwdTree": false,
+  "bwdMultiplier": 1,
+  "lettersPerWt": 0,
+  "manual": [
+    {
+      "id": "06 - Assets & References/Art Link.md",
+      "weight": 15
+    },
+    {
+      "id": "00 - Home/Dashboard.md",
+      "weight": 40
+    },
+    {
+      "id": "01 - Design/Design Link.md",
+      "weight": 15
+    },
+    {
+      "id": "02 - Levels/Level Template.md",
+      "weight": 15
+    },
+    {
+      "id": "03 - Systems/System Link.md",
+      "weight": 15
+    },
+    {
+      "id": "04 - Enemies & Bosses/Mobs Link.md",
+      "weight": 15
+    },
+    {
+      "id": "05 - Flows/Flow Link.md",
+      "weight": 15
+    }
+  ]
+}

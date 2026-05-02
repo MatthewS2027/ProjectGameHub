@@ -1,4 +1,4 @@
-# 🗺 Level 02 — [Name]
+# 🗺 Level 01 —  The Beginning
 
 ## 📋 Level Info
 
@@ -15,3 +15,5 @@
 ## 📝 Notes
 
 ## 🔗 Related
+[[Level Template]]
+

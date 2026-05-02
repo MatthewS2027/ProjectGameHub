@@ -15,3 +15,6 @@
 ## 📝 Notes
 
 ## 🔗 Related
+
+[[Level 01 - The Beginning]]
+[[Level 02 - The Next Step]]

@@ -1,0 +1,3 @@
+Links:
+[[Art Style]]
+[[Inspirations]]
