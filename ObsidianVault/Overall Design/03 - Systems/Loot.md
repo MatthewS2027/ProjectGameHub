@@ -1,15 +1,11 @@
-# 💰 Loot
+### Loot:
 Will drop items that have an [[Item Types]].
-## 🎰 Rarity Tiers
+### Rarity Tiers
 Currently there is only one [[Rarity]] which is common.
+### Drop Sources
 
-## 📦 Drop Sources
+### Drop Logic
 
-## 🎲 Drop Logic
-
-### Luck Stat (Optional)
-
-## 🗃 Loot Categories
 
 ## 🔗 Related
 [[Item Types]]

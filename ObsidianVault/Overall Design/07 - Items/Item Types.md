@@ -1,3 +1,6 @@
+---
+node_size: 20
+---
 
 Weapons :
 - Sword

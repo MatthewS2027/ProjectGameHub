@@ -1,6 +1,6 @@
-There are two weapons:
-- [[Sword]]
-- [[Scythe]]
+---
+node_size: 10
+---
 
 There are three types of armor:
 - [[Helmet]]
