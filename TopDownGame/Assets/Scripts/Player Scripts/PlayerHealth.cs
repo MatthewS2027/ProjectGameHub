@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     private float currentHealth;
     public float CurrentHealth => currentHealth;
+    private bool isDead = false;
 
 
     void Start()
@@ -24,15 +25,24 @@ public class PlayerHealth : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        Debug.Log("player health: " + currentHealth);
+        if (currentHealth > 0 && !isDead)
+        {
+            currentHealth -= damage;
+        }
+        Debug.Log("Player health: " + currentHealth);
 
         if (currentHealth <= 0f)
         {
+            isDead = true;
             player.Die();
         }
     }
-     
-    
+
+    public void SetDead(bool value)
+    {
+        isDead = value;
+    }
+
+
 
 }

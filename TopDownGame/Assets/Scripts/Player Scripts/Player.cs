@@ -34,6 +34,21 @@ public class Player : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player Died.");
+        playerHealth.SetDead(true);
+        movement.DisableMovement();
+        playerCombat.DisableAttack();
+
+        // Game Over logic
+
+        GetComponent<SpriteRenderer>().enabled = false; // Hide player sprite
+        GetComponent<Collider2D>().enabled = false; // Disable player collider
+
+        EnemyAI[] allEnemies = FindObjectsOfType<EnemyAI>();
+        foreach (EnemyAI enemy in allEnemies)
+        {
+            enemy.DisableChase(); // Disable all enemy AI
+        }
+
     }
     
 }

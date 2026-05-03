@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    private PlayerHealth playerHealth;
 
     [SerializeField] private float moveSpeed = 13f;
     [SerializeField] private float damagePerHit = 10f;
@@ -44,23 +45,35 @@ public class EnemyAI : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        
         if (!collision.gameObject.CompareTag("Player")) return;
 
         //Cooldown check
         if (Time.time < lastDamageTime + damageCooldown) return;
 
-        PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-        if(playerHealth != null)
+        PlayerHealth playerHealth = collision.gameObject.GetComponentInParent<PlayerHealth>();
+        if(playerHealth == null)
         {
-            playerHealth.TakeDamage(damagePerHit);
-            lastDamageTime = Time.time; // Update the last damage time
+            Debug.Log("PlayerHealth component not found.");
+            return;
+            
         }
+
+        playerHealth.TakeDamage(damagePerHit);
+        lastDamageTime = Time.time; // Update the last damage time
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
+    }
+
+    public void DisableChase()
+    {
+        playerTransform = null;
+        rb.velocity = Vector2.zero;
+        enabled = false;
     }
 
 }
