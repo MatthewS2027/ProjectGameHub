@@ -73,4 +73,10 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
+    public void DisableMovement()
+    {
+        enabled = false;
+        rb.velocity = Vector2.zero;
+    }
+
 }

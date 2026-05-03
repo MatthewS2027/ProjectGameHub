@@ -45,4 +45,9 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
+    public void DisableAttack()
+    {
+        enabled = false;
+    }
+
 }
