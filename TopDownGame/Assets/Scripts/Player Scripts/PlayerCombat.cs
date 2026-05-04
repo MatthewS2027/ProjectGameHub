@@ -2,52 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Remember the PURPOSE: Only when to attack. Future: Implement for all Heavy attacks / ability casts
+ * 
+ */
+
 public class PlayerCombat : MonoBehaviour
 {
 
-    [SerializeField] private float attackDamage = 25f;
-    [SerializeField] private float attackRange = 1.5f;
-    [SerializeField] private float attackCooldown = 0.5f;
+    private Player player;
+    [SerializeField] private Sword sword;
 
-    private float lastAttackTime;
+    private void Awake()
+    {
+        player = GetComponent<Player>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time >= lastAttackTime + attackCooldown)
+        //Light Attack
+        if (Input.GetMouseButtonDown(0))
         {
-            Attack();
-            lastAttackTime = Time.time;
+            StartCoroutine(sword.LightAttack());
         }
+
+        // Future: Add input for heavy attack / ability casts
+
     }
 
-    private void Attack()
+    
+    public void EnableHitbox()
     {
-
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
-
-        foreach (Collider2D hit in hits)
-        {
-            if (!hit.CompareTag("Enemy")) continue;
-
-            EnemyHealth enemyHealth = hit.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage(attackDamage);
-                //Debug.Log("Attacked enemy for " + attackDamage + " damage.");
-            }
-        }
+        GetComponentInChildren<Collider2D>().enabled = true;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
-
+    //Methods are called when player dies
     public void DisableAttack()
     {
         enabled = false;
     }
 
+    public void DisableSword()
+    {
+        GetComponentInChildren<Collider2D>().enabled = false;
+        GetComponentInChildren<SpriteRenderer>().enabled = false;
+    }
+    
 }
