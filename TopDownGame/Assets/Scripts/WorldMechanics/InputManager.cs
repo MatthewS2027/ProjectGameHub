@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] private Player player;
 
     // variable to hold mouse dir and mouse world pos
     private Vector2 mouseDir;
@@ -12,7 +13,6 @@ public class InputManager : MonoBehaviour
     //Allow public access to mouse dir
     public Vector2 MouseDir => mouseDir;
     public Vector3 MouseWorldPos => mouseWorldPos;
-
 
     //Cache main camera reference
 
@@ -29,6 +29,7 @@ public class InputManager : MonoBehaviour
         mouseWorldPos = cam.ScreenToWorldPoint(mouseScreen);    // convert mouse pos to world space
         mouseWorldPos.z = 0f; // 2D game
 
-        mouseDir = (mouseWorldPos - transform.position).normalized; // calculate mouse dir
+        mouseDir = (mouseWorldPos - player.transform.position).normalized; // calculate mouse dir
+        
     }
 }
