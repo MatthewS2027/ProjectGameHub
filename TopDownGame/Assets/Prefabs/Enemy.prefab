@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3038358993176881093}
   - component: {fileID: 3181601444319566572}
   - component: {fileID: 6377594730477475204}
+  - component: {fileID: 8893885969541843015}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -179,3 +180,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
+  hexColor: '#4E70E2'
+--- !u!114 &8893885969541843015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892347277421292399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a376854f2b68e9246afe7237e439ee4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackStrength: 8
+  knockbackDuration: 0.3
