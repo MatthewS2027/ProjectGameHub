@@ -6,18 +6,23 @@ node_size: 25
 
 This class will act as a central hub for all player-related scripts. All subsystems should be components of the Player game object and communicate through this class.
 
-### Breakdown:
+### Contents:
 
-- PlayerMovement: Handles movement and dashing
-- PlayerCombat: Handles all mechanics with dealing damage
-- PlayerHealth: Manages player health, taking damage, and death
+References to PlayerMovement, PlayerHealth, and PlayerCombat classes.
 
-References to all of these classes will be stored in Player class to allow for easy communication between scripts.
+Define Player Base Stats:
+	Base Speed
+	Max Health
+	Attack Damage
 
-This class will also store player stats.
-These include: 
-- Health
-- baseSpeed
+Private void Awake() - 
+
+	Retrieve components for all player scripts
+
+Public void Die() - 
+
+	Disable movement, attacking, sprite and collider, and enemy chasing. 
+	Game over logic is held here as well.
 
 ### Related:
 
