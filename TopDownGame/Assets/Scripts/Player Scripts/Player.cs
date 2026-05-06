@@ -21,10 +21,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float baseSpeed = 15f;
     [SerializeField] private float maxHealth = 100f;
+    private bool playerDead;
 
  
     public float BaseSpeed => baseSpeed;
     public float MaxHealth => maxHealth;
+    public bool PlayerDead => playerDead;
   
 
     private void Awake()
@@ -32,11 +34,13 @@ public class Player : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
         playerHealth = GetComponent<PlayerHealth>();
         playerCombat = GetComponent<PlayerCombat>();
+        playerDead = false;
     }
 
     // All Player death related logic
     public void Die()
     {
+        playerDead = true;
         Debug.Log("Player Died.");
         playerHealth.SetDead(true);
         movement.DisableMovement();

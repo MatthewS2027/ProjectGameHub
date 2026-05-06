@@ -6,10 +6,12 @@ using UnityEngine;
 public class SwordHitbox : Sword
 {
     [SerializeField] private Sword sword;
+    private Transform playerTransform;
 
     private void Awake()
     {
-        sword = GetComponentInParent<Sword>(); 
+        sword = GetComponentInParent<Sword>();
+        playerTransform = transform.root;
 
         if (sword == null)
         {
@@ -22,21 +24,22 @@ public class SwordHitbox : Sword
 
         if (collision.TryGetComponent<EnemyHealth>(out var enemy))
         {
-            enemy.TakeDamage(sword.GetDamage);
+            enemy.TakeDamage(sword.GetDamage, playerTransform.position);
 
+            /*
             if (HitStop.instance != null)
             {
-                Debug.Log("Before Hitstop");
                 HitStop.instance.ScreenFreeze(sword.LightAttackFreezeDur);
-                Debug.Log("After Hitstop");
             }
-            else
+            */
+            if (collision.TryGetComponent<KnockbackBehavior>(out var enemyKnockback))
             {
-                Debug.Log("Hitstop instance is NULL");
+                enemyKnockback.ApplyKnockback(transform.root.position);
             }
+
         }
         
     }
-
+    
 
 }

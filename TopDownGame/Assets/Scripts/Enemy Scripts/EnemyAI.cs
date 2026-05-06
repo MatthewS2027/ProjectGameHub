@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     private PlayerHealth playerHealth;
+    private KnockbackBehavior knockbackBehavior;
 
     [SerializeField] private float moveSpeed = 13f;
     [SerializeField] private float damagePerHit = 10f;
@@ -15,14 +16,18 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
     private float lastDamageTime; // Tracks the last time damage was applied to the player
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        knockbackBehavior = GetComponent<KnockbackBehavior>();
+        
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
             playerTransform = playerObj.transform;
+            
         }
         else
         {
@@ -32,15 +37,21 @@ public class EnemyAI : MonoBehaviour
 
     private void FixedUpdate()
     {
+     
         if (playerTransform == null) return;
 
         float distance = Vector2.Distance(rb.position, playerTransform.position);
 
-        if (distance <= detectionRange)
+        if (!knockbackBehavior.IsKnockedBack)
         {
-            Vector2 direction= ((Vector2)playerTransform.position - rb.position).normalized;
-            rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * direction);
-        }
+
+            if (distance <= detectionRange)
+            {
+                Vector2 direction = ((Vector2)playerTransform.position - rb.position).normalized;
+                rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * direction);
+            }
+        } 
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -59,6 +70,12 @@ public class EnemyAI : MonoBehaviour
             
         }
 
+        //Knockback
+        if (collision.gameObject.TryGetComponent<KnockbackBehavior>(out var playerKnockback))
+        {
+            playerKnockback.ApplyKnockback(transform.root.position);
+        }
+
         playerHealth.TakeDamage(damagePerHit);
         lastDamageTime = Time.time; // Update the last damage time
     }
@@ -75,5 +92,6 @@ public class EnemyAI : MonoBehaviour
         rb.velocity = Vector2.zero;
         enabled = false;
     }
+
 
 }
