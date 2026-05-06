@@ -13,28 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Code Structure/Player Classes/Player.md",
+                "file": "Code Structure/Player Classes/PlayerMovement.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Player"
-            }
-          }
-        ]
-      },
-      {
-        "id": "10288c8bba8a2257",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "5c254ab0c5468653",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "PlayerMovement"
             }
           }
         ]
@@ -196,9 +180,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "5c254ab0c5468653",
+  "active": "b614383af9fc67b8",
   "lastOpenFiles": [
+    "Code Structure/Player Classes/PlayerHealth.md",
+    "Code Structure/Player Classes/PlayerCombat.md",
     "Code Structure/Player Classes/Player.md",
+    "Code Structure/Code Structure.md",
+    "Overall Design/03 - Systems/Loot.md",
+    "Overall Design/03 - Systems/Combat.md",
+    "Overall Design/03 - Systems/Player.md",
+    "Overall Design/01 - Design/Vision.md",
+    "Overall Design/01 - Design/Progression.md",
+    "Overall Design/01 - Design/Game Loop.md",
+    "Overall Design/01 - Design/Design.md",
+    "Overall Design/00 - Home/Overall Design.md",
+    "Code Structure/Player Classes/PlayerMovement.md",
     "Overall Design/07 - Items/Weapons.md",
     "Overall Design/07 - Items/Armor.md",
     "Overall Design/07 - Items/Item Types.md",
@@ -207,16 +203,8 @@
     "Overall Design/04 - Enemies & Bosses/Mobs.md",
     "Overall Design/03 - Systems/Systems.md",
     "Overall Design/02 - Levels/Level Template.md",
-    "Overall Design/01 - Design/Game Loop.md",
-    "Overall Design/01 - Design/Design.md",
-    "Overall Design/00 - Home/Overall Design.md",
-    "Code Structure/Code Structure.md",
-    "Code Structure/Player Classes/PlayerMovement.md",
-    "Code Structure/Player Classes/PlayerHealth.md",
-    "Code Structure/Player Classes/PlayerCombat.md",
     "Code Structure/Player Classes/Untitled",
     "Code Structure/Player Classes",
-    "Overall Design/03 - Systems/Loot.md",
     "Code Structure",
     "Weapon Types/Untitled",
     "Overall Design",
@@ -226,12 +214,8 @@
     "Overall Design/Armor Types/Helmet.md",
     "Overall Design/Armor Types",
     "Overall Design/Weapon Types/Scythe.md",
-    "Overall Design/Weapon Types/Sword.md",
     "Overall Design/Weapon Types",
-    "Helmets.md",
     "Item Attributes",
-    "Overall Design/04 - Enemies & Bosses/Enemy Template.md",
-    "Overall Design/07 - Items",
-    "03 - Systems/Items.md"
+    "Overall Design/07 - Items"
   ]
 }
