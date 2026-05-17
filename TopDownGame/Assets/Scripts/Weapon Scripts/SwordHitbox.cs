@@ -25,8 +25,8 @@ public class SwordHitbox : MonoBehaviour
         {
             enemy.TakeDamage(sword.GetDamage, playerTransform.position);
 
-            
-            if (HitStop.instance != null)
+            /*
+            if (!HitStop.instance.IsHitStopping)
             {
                 HitStop.instance.ExecHitStop(sword.LightAttackFreezeDur);
             }

@@ -41,7 +41,7 @@ public class KnockbackBehavior : MonoBehaviour
 
     private IEnumerator KnockbackCoroutine(Vector2 hitSourcePos)
     {
-        Debug.Log("Knockback applied");
+
         IsKnockedBack = true;
 
         // Calculate direction opposite of attacker

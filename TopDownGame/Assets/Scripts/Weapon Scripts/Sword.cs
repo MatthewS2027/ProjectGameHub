@@ -18,7 +18,7 @@ public class Sword : MonoBehaviour
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private float attackTime = 0.08f;
 
-    [SerializeField] private float lightAttackFreezeDur = 0.15f;
+    [SerializeField] public float lightAttackFreezeDur = 0.3f;
 
     public float GetDamage => damage;
     public float LightAttackFreezeDur => lightAttackFreezeDur;

@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "85d13e8a99b09e00",
+    "type": "split",
+    "children": [
+      {
+        "id": "7fdd7070d3e166e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9cf45e735f32d2d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Game Architecture/Combat Folder.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Combat Folder"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "61f9204c5d5fdd4e",
+    "type": "split",
+    "children": [
+      {
+        "id": "661395cd739bc1d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f2724a83abb79dea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "10aa725aeb74bcfb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f36ae12c90072fa3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "2e59441b44a6908e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e8176b670a453ee3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39da5dd27f3b7a85",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "C-Sharp Scripts/Player Scripts/Player Health.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Player Health"
+            }
+          },
+          {
+            "id": "16fae34f21e3abdd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "C-Sharp Scripts/Player Scripts/Player Health.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Player Health"
+            }
+          },
+          {
+            "id": "c8e7212ab6268ace",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ec8c005b95b82f45",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "4f7abc00591af868",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "C-Sharp Scripts/Player Scripts/Player Health.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Player Health"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "9cf45e735f32d2d7",
+  "lastOpenFiles": [
+    "Game Architecture/Future Goal Structure.md",
+    "Game Architecture/Combat Folder.md",
+    "Game Architecture",
+    "Concepts/Game Notes.md",
+    "Concepts/Systems to Implement.md",
+    "Concepts/Game Mechanics.md",
+    "C-Sharp Scripts/Weapon Scripts/Sword Hitbox.md",
+    "C-Sharp Scripts/World Mechanics/Hit Stop (Updated).md",
+    "C-Sharp Scripts/World Mechanics/Hit Stop.md",
+    "C-Sharp Scripts/Weapon Scripts/Sword.md",
+    "C-Sharp Scripts/Player Scripts/Inventory Scripts/Basic Inventory System.md",
+    "C-Sharp Scripts/Player Scripts/Inventory Scripts/Inventory UI Script.md",
+    "C-Sharp Scripts/Player Scripts/Inventory Scripts/UI Slot Script.md",
+    "Script Tickets/Weapon Data SO.md",
+    "Script Tickets/Equip - Unequip Items.md",
+    "Script Tickets/Drop-Pick Up Loot.md",
+    "Concepts/Weapon Ideas.md",
+    "Concepts/Weapon Info.md",
+    "C-Sharp Scripts/Loot Scripts/Enemy Loot Drop.md",
+    "C-Sharp Scripts/Loot Scripts/Item Pickup.md",
+    "C-Sharp Scripts/World Mechanics/Input Manager.md",
+    "C-Sharp Scripts/Weapon Scripts/Weapon (Future).md",
+    "C-Sharp Scripts/Player Scripts/Inventory Scripts",
+    "C-Sharp Scripts/Player Scripts/I_Frames.md",
+    "C-Sharp Scripts/Enemy Scripts/Spawn Manager.md",
+    "C-Sharp Scripts/Enemy Scripts/Enemy Spawner.md",
+    "C-Sharp Scripts/Enemy Scripts/Enemy Health.md",
+    "C-Sharp Scripts/Enemy Scripts/Enemy AI.md",
+    "C-Sharp Scripts/Loot Scripts",
+    "Script Tickets/Weapon Data SO.base",
+    "Script Tickets",
+    "C-Sharp Scripts/World Mechanics",
+    "C-Sharp Scripts/Weapon Scripts",
+    "C-Sharp Scripts/Enemy Scripts",
+    "C-Sharp Scripts/Player Scripts",
+    "Untitled/desktop.ini"
+  ]
+}
