@@ -1,40 +1,44 @@
-/*
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Hopefully this should lead to a clean Hit Stop Setup
+// Call 'execHitStop' in weapon scripts and pass duration
+
 public class HitStop : MonoBehaviour
 {
-    public static HitStop instance;
 
-    private bool isHitStopping;
+    public static HitStop instance;
+    private bool isHitStopping = false;
 
     private void Awake()
     {
         instance = this;
     }
 
-    public void ScreenFreeze(float duration, float timeScale = 0f)
+    public void ExecHitStop(float duration)
     {
-        if (isHitStopping) return;
-        StartCoroutine(DoHitStop(duration, timeScale));
+        if (!isHitStopping)
+        {
+            StartCoroutine(HitStopEnum(duration));
+        }
     }
 
-    private IEnumerator DoHitStop(float duration, float timeScale)
+    private IEnumerator HitStopEnum(float duration)
     {
         isHitStopping = true;
 
-        float originalTimeScale = Time.timeScale;
+        if (Time.timeScale == 1.0f)
+        {
+            Time.timeScale = 0.1f;
+            yield return new WaitForSecondsRealtime(duration);
+        }
 
-        Time.timeScale = timeScale;
-        yield return new WaitForSecondsRealtime(duration);
-        Time.timeScale = originalTimeScale;
+        Time.timeScale = 1.0f;
 
         isHitStopping = false;
-        yield return new WaitForSeconds(0.1f);
 
-        
     }
 
 }
-*/
