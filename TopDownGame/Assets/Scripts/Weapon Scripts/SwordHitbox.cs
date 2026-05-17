@@ -27,9 +27,9 @@ public class SwordHitbox : Sword
             enemy.TakeDamage(sword.GetDamage, playerTransform.position);
 
             /*
-            if (HitStop.instance != null)
+            if (!HitStop.instance.IsHitStopping)
             {
-                HitStop.instance.ScreenFreeze(sword.LightAttackFreezeDur);
+                HitStop.instance.ExecHitStop(sword.LightAttackFreezeDur);
             }
             */
             if (collision.TryGetComponent<KnockbackBehavior>(out var enemyKnockback))
