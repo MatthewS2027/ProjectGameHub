@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 
-public class SwordHitbox : Sword
+public class SwordHitbox : MonoBehaviour
 {
     [SerializeField] private Sword sword;
-    private Transform playerTransform;
+    [SerializeField] private Transform playerTransform;
 
     private void Awake()
     {
         sword = GetComponentInParent<Sword>();
-        playerTransform = transform.root;
 
         if (sword == null)
         {
@@ -31,7 +30,7 @@ public class SwordHitbox : Sword
             {
                 HitStop.instance.ExecHitStop(sword.LightAttackFreezeDur);
             }
-            */
+            
             if (collision.TryGetComponent<KnockbackBehavior>(out var enemyKnockback))
             {
                 enemyKnockback.ApplyKnockback(transform.root.position);

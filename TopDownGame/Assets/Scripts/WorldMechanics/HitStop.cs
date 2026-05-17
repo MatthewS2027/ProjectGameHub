@@ -5,6 +5,9 @@ using UnityEngine;
 // Hopefully this should lead to a clean Hit Stop Setup
 // Call 'execHitStop' in weapon scripts and pass duration
 
+// Hopefully this should lead to a clean Hit Stop Setup
+// Call 'execHitStop' in weapon scripts and pass duration
+
 public class HitStop : MonoBehaviour
 {
 
