@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     private Player player;
+    private I_Frames iFrames;
 
     [SerializeField] private Rigidbody2D rb;
     private Vector2 movement;
@@ -21,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GetComponent<Player>();
+        iFrames = GetComponent<I_Frames>();
     }
 
     // Update is called once per frame
@@ -59,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
             dashDir = movement.normalized;
 
         float startTime = Time.time;
+        iFrames.execIFrames(dashTime + 0.1f);
 
         while (Time.time < startTime + dashTime)    //Keep dashing while current time is less than start + dash time
         {
@@ -78,5 +78,4 @@ public class PlayerMovement : MonoBehaviour
         enabled = false;
         rb.velocity = Vector2.zero;
     }
-
 }

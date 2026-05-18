@@ -1,0 +1,97 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyAI : MonoBehaviour
+{
+    private PlayerHealth playerHealth;
+    private KnockbackBehavior knockbackBehavior;
+
+    [SerializeField] private float moveSpeed = 13f;
+    [SerializeField] private float damagePerHit = 10f;
+    [SerializeField] private float damageCooldown = 1f;  // Time in seconds between damage applications
+    [SerializeField] private float detectionRange = 10f; // How far an enemy can 'see' the player from
+
+    private Transform playerTransform;
+    private Rigidbody2D rb;
+    private float lastDamageTime; // Tracks the last time damage was applied to the player
+
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        knockbackBehavior = GetComponent<KnockbackBehavior>();
+        
+
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            playerTransform = playerObj.transform;
+            
+        }
+        else
+        {
+            Debug.LogError("Enemy AI: No GameObject with tag 'Player' found");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+     
+        if (playerTransform == null) return;
+
+        float distance = Vector2.Distance(rb.position, playerTransform.position);
+
+        if (!knockbackBehavior.IsKnockedBack)
+        {
+
+            if (distance <= detectionRange)
+            {
+                Vector2 direction = ((Vector2)playerTransform.position - rb.position).normalized;
+                rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * direction);
+            }
+        } 
+        
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        
+        if (!collision.gameObject.CompareTag("Player")) return;
+
+        //Cooldown check
+        if (Time.time < lastDamageTime + damageCooldown) return;
+
+        PlayerHealth playerHealth = collision.gameObject.GetComponentInParent<PlayerHealth>();
+        if(playerHealth == null)
+        {
+            Debug.Log("PlayerHealth component not found.");
+            return;
+            
+        }
+
+        //Knockback
+        if (collision.gameObject.TryGetComponent<KnockbackBehavior>(out var playerKnockback))
+        {
+            playerKnockback.ApplyKnockback(transform.root.position);
+        }
+
+        playerHealth.TakeDamage(damagePerHit);
+        lastDamageTime = Time.time; // Update the last damage time
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+    }
+
+    public void DisableChase()
+    {
+        playerTransform = null;
+        rb.velocity = Vector2.zero;
+        enabled = false;
+    }
+
+
+}
